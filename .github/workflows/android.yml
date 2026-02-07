@@ -1,4 +1,4 @@
-name: Build Android APK
+name: Build APK
 on: [push]
 jobs:
   build:
@@ -12,10 +12,11 @@ jobs:
           distribution: 'temurin'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
-      - name: Build with Gradle
+      - name: Build
         run: gradle assembleDebug
-      - name: Upload APK
+      - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: gcam-apk
           path: app/build/outputs/apk/debug/*.apk
+e

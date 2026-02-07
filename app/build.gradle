@@ -2,9 +2,11 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
+
 android {
     namespace 'com.chaxs.gcamconfig'
     compileSdk 34
+
     defaultConfig {
         applicationId "com.chaxs.gcamconfig"
         minSdk 24
@@ -13,7 +15,9 @@ android {
         versionName "1.0"
     }
 }
+
 dependencies {
+    // Tambahkan 2 baris ini agar AppCompatActivity tidak error
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
 }

@@ -1,23 +1,16 @@
 plugins {
     id 'com.android.application'
-    id 'kotlin-android'
+    id 'kotlin-android' // Wajib ada ini agar file .kt terbaca
 }
 
 android {
     namespace 'com.chaxs.gcamconfig'
     compileSdk 34
-
-    defaultConfig {
-        applicationId "com.chaxs.gcamconfig"
-        minSdk 24
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
-    }
+    // ... sisa kode lainnya
 }
 
 dependencies {
-    // Tambahkan 2 baris ini agar AppCompatActivity tidak error
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.9.0" // Tambahkan ini jika error
 }
